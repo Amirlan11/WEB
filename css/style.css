@@ -5,6 +5,12 @@ body {
     color: #151d28;
     background-color: #f9fbff;
 }
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
 
 *,
 *::after,
@@ -80,7 +86,6 @@ body {
 
 /*===============WORKS START===============*/
 .works__bg {
-    background-image: url(../img/background2.jpg);
 }
 
 .work__item {
@@ -148,20 +153,118 @@ body {
     color: #415167;
 }
 /*===============GIFTSET END===============*/
+/*===============cofee combo starts===============*/
+.blogs .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.blogs .box-container .box{
+    border:var(--border);    
+}
+
+.blogs .box-container .box .image{
+    height: 25rem;
+    overflow:hidden;
+    width: 100%;
+}
+
+.blogs .box-container .box .image img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blogs .box-container .box:hover .image img{
+    transform: scale(1.2);
+}
+
+.blogs .box-container .box .content{
+    padding:2rem;
+}
+
+.blogs .box-container .box .content .title{
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color:#fff;
+}
+
+.blogs .box-container .box .content .title:hover{
+    color:var(--main-color);
+}
+
+.blogs .box-container .box .content span{
+    color:var(--main-color);
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+.blogs .box-container .box .content p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color:#ccc;
+    padding:1rem 0;
+}
+/*===============cofee combo END===============*/
 
 /*===============FOOTER START===============*/
-.footer {
-    width: 100vw;
-    height: auto;
-    padding-top: 40px;
-    color: #edf0f5;
-}
-
-.footer__content {
+.footer{
+    background: #232c38;
     text-align: center;
 }
 
-.footer__bottom {
-    text-align: center;
+.footer .share{
+    padding: 1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #f9fbff;
+    border:.1rem solid rgba(255,255,255,.3);
+    border-radius: 50%; 
+    margin: 0.3rem;
+    transition: all linear 0.3s;
+}
+
+.footer .share a:hover{
+    text-decoration: none;
+    color: #c7a17a;
+    background-color: #f9fbff;
+}
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rm;
+}
+.footer .links a{
+    padding: .7rem 2rem;
+    color: #fafafa;
+    border: 1px solid #fafafa;
+    font-size: 2rem;
+    transition: all linear 0.3s;
+     
+    margin: 0.3rem;
+}
+.footer .links a:hover{
+    text-decoration: none;
+    color: #c7a17a;
+    background-color:#fafafa;
+}
+.footer .credit{
+    font-size: 2rem;
+    color: #fafafa;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+.footer .credit span{
+    color: #c7a17a;
+
 }
 /*===============FOOTER END===============*/
